@@ -117,9 +117,7 @@ Check backend availability at [http://localhost:8000/health](http://localhost:80
 
 ## Documentation
 
-- [Development and operations](docs/DEVELOPMENT.md): prerequisites, environment setup, startup, logging, and deployment checklist.
-- [HTTP API](docs/API.md): routes, authentication, request and response fields, and error codes.
-- [Database and plan administration](docs/DATABASE.md): migration order, access controls, usage accounting, and SQL examples.
+- [Deployment guide](docs/DEPLOYMENT.md): deploy the React client to Vercel and the Python API to Render, set environment variables and CORS, configure Supabase Auth URLs, and verify the live app.
 
 ## Current plan rules
 
@@ -138,6 +136,12 @@ An account administrator changes a plan directly in `public.account_usage` using
 - The backend currently allows localhost Vite origins by default. A hosted frontend requires updating the backend CORS allowlist and environment configuration.
 - The app displays Gemini token usage when the model response includes usage metadata; a missing count may be recorded as zero.
 - The app is designed for development and demonstration. Review the deployment and security checklist before exposing it publicly.
+
+## Deployment files
+
+- `render.yaml` defines the Render API service and its health check.
+- `frontend/vercel.json` configures the Vercel single-page-app fallback.
+- `backend/.env.example` and `frontend/.env.example` show the required variable names without real credentials.
 # EinsteinAI-2.0
 # EinsteinAI-2.0
 # EinsteinAI-2.0
